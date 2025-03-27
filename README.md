@@ -15,3 +15,14 @@ The script generates DataFrames of varying sizes (1,000 / 10,000 / 1,00,000 / 1,
 ## Requirements
 To run the script, install the following dependencies:
 ```pip install pandas numpy matplotlib```
+
+## Usage
+Run the script using:
+```python benchmark_pandas.py```
+This will generate a performance comparison plot showing execution times.
+
+## Results & Key Findings
+-NumPy vectorization is the fastest method.
+-apply() performs well but is slower than vectorization.
+-itertuples() is faster than iterrows().
+-iterrows() is the slowest and should be avoided for large datasets.
